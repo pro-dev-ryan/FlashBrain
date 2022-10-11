@@ -1,0 +1,42 @@
+.App {
+  background-image: url("https://wallpaperaccess.com/full/3255061.jpg");
+}
+
+.active {
+  position: relative;
+  font-weight: 600;
+  color: rgb(159, 229, 247);
+  padding-bottom: 3px;
+  transition: 0.2s ease-in;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(180, 199, 240);
+  border-radius: 50px;
+  height: 3px;
+  width: 0;
+  transform: translate(5px, 0);
+  transition: 0.5s ease-out;
+  bottom: 0;
+  left: 5px;
+  right: 0;
+  top: 0;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(252, 175, 102);
+  border-radius: 50px;
+  height: 3px;
+  width: 30%;
+  transform-origin: top;
+  transform: translate(3px, 0);
+  transition: 0.5s ease-out;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  top: 100%;
+}

@@ -7,9 +7,7 @@ const Quiz = () => {
   const questions = quiz.data.questions;
   return (
     <div>
-      {questions.map((quest) => (
-        <Question key={quest.id} quest={quest} />
-      ))}
+      <Question questions={questions} />
     </div>
   );
 };

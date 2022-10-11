@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Card({ card }) {
   const { id, name, logo, total } = card;
@@ -11,9 +12,9 @@ function Card({ card }) {
           <p>
             <small>Total Quizes: {total}</small>
           </p>
-          <button className="cardBtn" onClick={() => id}>
+          <Link to={`${id}`} className="cardBtn">
             Take Test
-          </button>
+          </Link>
         </div>
       </div>
     </div>

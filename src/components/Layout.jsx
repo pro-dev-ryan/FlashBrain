@@ -5,7 +5,7 @@ import Header from "./Header";
 const Layout = () => {
   const cardData = useLoaderData();
   return (
-    <div className="Layout">
+    <div className="Layout backdrop-blur-sm">
       <Header />
       <Outlet />
       <Footer />

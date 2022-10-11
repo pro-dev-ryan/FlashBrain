@@ -3,12 +3,19 @@
 @tailwind utilities;
 
 .cards {
-  @apply w-[80%] mx-auto grid grid-cols-2;
+  @apply flex justify-center items-center;
 }
 
 .card-template {
-  @apply bg-slate-400 bg-opacity-30 backdrop-blur-md w-[45%] p-5 m-4;
+  @apply bg-zinc-400 border border-stone-500 border-opacity-20 rounded-lg bg-opacity-60 hover:shadow-xl shadow-slate-400 backdrop-blur-md w-[45%] p-5 m-4;
 }
 .card img {
-  @apply h-60 border border-slate-300;
+  @apply h-60;
+}
+
+.info {
+  @apply text-slate-300 font-heading;
+}
+.cardBtn {
+  @apply bg-white font-button bg-opacity-20 rounded-md px-4 py-1 my-2 text-white font-semibold shadow-md hover:bg-opacity-40 hover:shadow-slate-400 transition duration-200;
 }

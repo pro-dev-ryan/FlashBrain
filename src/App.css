@@ -1,5 +1,7 @@
 .App {
   background-image: url("https://wallpaperaccess.com/full/3255061.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .active {

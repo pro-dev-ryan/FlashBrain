@@ -7,9 +7,13 @@ function Card({ card }) {
       <div className="card-template">
         <img src={logo} alt="" />
         <div className="info">
-          <h4>Name:{name}</h4>
-          <p>Total Quizes: {total}</p>
-          <button onclick={() => id}>Take Test</button>
+          <h4 className="font-semibold text-white">Name: {name}</h4>
+          <p>
+            <small>Total Quizes: {total}</small>
+          </p>
+          <button className="cardBtn" onClick={() => id}>
+            Take Test
+          </button>
         </div>
       </div>
     </div>

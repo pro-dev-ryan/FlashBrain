@@ -1,12 +1,17 @@
 import React from "react";
 
-function Card(props) {
+function Card({ card }) {
+  const { id, name, logo, total } = card;
   return (
-    <div>
-      <img src="" alt="" />
-      <h4>Name:</h4>
-      <p>Total Quizes</p>
-      <button>Take Test</button>
+    <div className="cards">
+      <div className="card-template">
+        <img src={logo} alt="" />
+        <div className="info">
+          <h4>Name:{name}</h4>
+          <p>Total Quizes: {total}</p>
+          <button onclick={() => id}>Take Test</button>
+        </div>
+      </div>
     </div>
   );
 }

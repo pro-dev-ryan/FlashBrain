@@ -7,10 +7,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
     children: [
       {
         path: "home",
+        loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
         element: <Home />,
       },
       {

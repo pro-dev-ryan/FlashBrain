@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cards {
+  @apply w-[80%] mx-auto grid grid-cols-2;
+}
+
+.card-template {
+  @apply bg-slate-400 bg-opacity-30 backdrop-blur-md w-[45%] p-5 m-4;
+}
+.card img {
+  @apply h-60 border border-slate-300;
+}

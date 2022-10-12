@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.glass {
+  @apply backdrop-blur-md border-y border-white border-opacity-40;
+}
+
 .cards {
   @apply flex justify-center items-center;
 }
 
 .card-template {
-  @apply bg-zinc-400 border border-stone-500 border-opacity-20 rounded-lg bg-opacity-60 hover:shadow-xl shadow-slate-400 backdrop-blur-md w-[45%] p-5 m-4;
+  @apply bg-zinc-400 border border-stone-500 border-opacity-20 rounded-lg bg-opacity-60 lg:hover:shadow-xl focus:lg:ring-2 shadow-slate-400 backdrop-blur-md lg:w-[80%] lg:p-4 p-2 lg:m-3 m-2;
 }
 .card img {
-  @apply h-60;
+  @apply lg:h-52;
 }
 
 .info {
-  @apply text-slate-300 font-heading;
+  @apply text-slate-300 font-heading my-2;
 }
 .cardBtn {
-  @apply bg-white font-button bg-opacity-20 rounded-md px-4 py-1 my-2 text-white font-semibold shadow-md hover:bg-opacity-40 hover:shadow-slate-400 transition duration-200;
+  @apply bg-white font-button bg-opacity-20 rounded-md px-4 py-2 my-5 text-white font-semibold shadow-md hover:bg-opacity-40 hover:shadow-slate-400 transition duration-200;
 }

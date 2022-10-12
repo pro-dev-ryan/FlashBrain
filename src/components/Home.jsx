@@ -9,11 +9,11 @@ const Home = () => {
   const cards = cardData.data;
 
   return (
-    <div className="grid grid-cols-4">
-      <div className="selfInfo grid col-span-1">
+    <div>
+      <div className="lg:w-[90%] mt-10">
         <Self />
       </div>
-      <div className="cardDiv grid grid-cols-2 col-span-3 mx-auto my-3em gap-0">
+      <div className="cardDiv grid lg:grid-cols-4 md:grid-cols-2 mx-auto lg:my-20">
         {cards.map((card) => (
           <Card card={card} key={card.id} />
         ))}

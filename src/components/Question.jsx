@@ -46,21 +46,21 @@ function Question({ questions }) {
   };
 
   return (
-    <div className="h-[90vh] text-center overflow-y-hidden">
-      <div className="quest bg-white bg-opacity-60 m-5 max-w-[40%] mx-auto p-5 block text-left rounded">
+    <div className="lg:h-[80vh] lg:my-10 text-center overflow-y-hidden">
+      <div className="quest bg-white bg-opacity-60 lg:max-w-[40%] lg:m-auto lg:p-5 p-2 block text-left rounded">
         <div className="flex justify-between">
-          <h2 className="mb-2 font-heading text-lg font-semibold">
+          <h2 className=" font-heading text-base lg:text-lg lg:font-semibold">
             Q{quest}: {filteredQuest(questText)}
           </h2>
           <button onClick={() => setShow(!show)}>
-            <EyeIcon className="h-6 w-6 text-green-700" />{" "}
+            <EyeIcon className="h-4 w-4 lg:h-6 lg:w-6 text-green-700" />{" "}
           </button>
         </div>
-        <ol type="1" className="">
+        <ol>
           {questions[quest].options.map((ans, index) => (
             <li
               key={index}
-              className="bg-slate-600 p-2 bg-opacity-50 text-white my-5 font-button rounded-md"
+              className="bg-slate-600 p-1 lg:p-2 bg-opacity-50 text-white my-5 font-button text-sm lg:text-base rounded-md"
             >
               <span>
                 <input
@@ -75,7 +75,7 @@ function Question({ questions }) {
           ))}
         </ol>
         {show && (
-          <p className="bg-slate-200 p-2 bg-opacity-40 text-green-700 my-5 font-button rounded-md hidden">
+          <p className="bg-slate-200 p-2 bg-opacity-40 text-green-700 my-5 font-button rounded-md">
             Correct Answer: {questions[quest].correctAnswer}
           </p>
         )}

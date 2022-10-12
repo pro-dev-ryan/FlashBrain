@@ -9,10 +9,10 @@ function Card({ card }) {
         <img src={logo} alt="" />
         <div className="info">
           <h4 className="font-semibold text-white">Name: {name}</h4>
-          <p>
+          <p className="mb-2">
             <small>Total Quizes: {total}</small>
           </p>
-          <Link to={`${id}`} className="cardBtn">
+          <Link to={`${id}`} className="cardBtn ">
             Take Test
           </Link>
         </div>

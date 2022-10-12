@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <nav className="lg:h-18 h-10 glass bg-slate-50 bg-opacity-25 px-10 items-center justify-between flex">
         <p className="flex items-center text-lg lg:text-2xl font-semibold text-white">
-          <img className="w-6 lg:w-12" src="/public/favicon.png" alt="logo" />{" "}
+          <img className="w-6 lg:w-12" src="/favicon.png" alt="logo" />{" "}
           Skill-Tester
         </p>
         <ul className="navlinks hidden lg:flex list-none gap-5 h-full text-lg items-center justify-end w-2/5">
@@ -14,7 +14,7 @@ const Header = () => {
             <NavLink
               className={`text-slate-200 ${(isActive) =>
                 isActive ? "active" : undefined}`}
-              to={"home"}
+              to={"/"}
               end
             >
               Home
@@ -98,7 +98,7 @@ const Header = () => {
                   <ul class="space-y-4">
                     <li>
                       <NavLink
-                        to="/home"
+                        to="/"
                         aria-label="Home"
                         title="Home"
                         class="font-medium tracking-wide text-gray-200 transition-colors duration-200 hover:text-deep-purple-accent-400"

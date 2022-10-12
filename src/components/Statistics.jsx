@@ -11,7 +11,7 @@ import {
 
 const Statistics = () => {
   return (
-    <div className="flex flex-col justify-center items-center space-y-5">
+    <div className="flex flex-col justify-center items-center space-y-5 h-[100vh]">
       <h2 className="text-center text-xl lg:text-2xl lg:my-5 text-white font-heading font-bold glass w-fit bg-zinc-700 bg-opacity-30 p-2">
         This is Statistics
       </h2>

@@ -8,7 +8,7 @@ const Header = () => {
         <img className="w-12" src="/public/favicon.png" alt="logo" />{" "}
         Skill-Tester
       </p>
-      <ul className="lg:flex list-none gap-5 h-full text-lg items-center justify-end w-2/5">
+      <ul className="navlinks lg:flex list-none gap-5 h-full text-lg items-center justify-end w-2/5">
         <li>
           <NavLink
             className={`text-slate-200 ${(isActive) =>

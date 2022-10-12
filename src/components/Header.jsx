@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 const Header = () => {
-  // let activeClassName = "active";
   return (
     <nav className="h-18 backdrop-blur-md border-y border-white border-opacity-40 bg-slate-50 bg-opacity-25 px-10 flex items-center justify-between">
       <p className="flex items-center text-2xl font-semibold text-white">

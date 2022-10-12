@@ -1,0 +1,28 @@
+---------------------------------------(Compusory)
+
+1. site title
+2. fav icon
+3. nav bar
+4. header/ something inside that
+5. topic has to be loaded from api
+6. topic routes (dynamic)
+7. if ans is correct or wrong need to showed by toast.
+8. show correct by a icon
+
+-----------------------------------------------(Bonus)
+
+9. responsive
+10. 404 routes
+11. a blog page with ans of the question below
+
+    1. what is the purpose of react router.
+    2. how does context api work
+    3. what is use href hook in react router
+
+12. show total in a chart on statistics page by topic
+13. read.md file with three topic with bullet point
+14. 10 commits in github
+15. redirect for deployment
+    ---------------------------------------------------(optional)
+16. all correct answeres and wrong answeres
+17. A hover for links.

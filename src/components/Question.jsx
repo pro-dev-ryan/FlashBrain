@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { EyeIcon } from "@heroicons/react/24/solid";
 
 function Question({ questions }) {
   const [quest, setQuest] = useState(0);
   const [correct, setCorrect] = useState(1);
-  // console.log(questions);
+  const [wrong, setWrong] = useState(1);
+  const [show, setShow] = useState(false);
+  console.log(show);
+
+  const questText = questions[quest].question;
+  const filteredQuest = (str) => {
+    if ((str === "", str === null)) {
+      return false;
+    } else {
+      return str.replace(/(<([^>]+)>)/gi, "");
+    }
+  };
 
   const handleNextQuest = () => {
     if (quest < questions.length - 1) {
@@ -28,7 +40,7 @@ function Question({ questions }) {
         postition: "top left",
         autoClose: 1500,
       });
-      wrong = wrong + 1;
+      setWrong((current) => current + 1);
       console.log(wrong);
     }
   };
@@ -36,9 +48,14 @@ function Question({ questions }) {
   return (
     <div className="h-[90vh] text-center overflow-y-hidden">
       <div className="quest bg-white bg-opacity-60 m-5 max-w-[40%] mx-auto p-5 block text-left rounded">
-        <h2 className="mb-2 font-heading text-lg font-semibold">
-          Q: {quest} {questions[quest].question}
-        </h2>
+        <div className="flex justify-between">
+          <h2 className="mb-2 font-heading text-lg font-semibold">
+            Q{quest}: {filteredQuest(questText)}
+          </h2>
+          <button onClick={() => setShow(!show)}>
+            <EyeIcon className="h-6 w-6 text-green-700" />{" "}
+          </button>
+        </div>
         <ol type="1" className="">
           {questions[quest].options.map((ans, index) => (
             <li
@@ -57,6 +74,11 @@ function Question({ questions }) {
             </li>
           ))}
         </ol>
+        {show && (
+          <p className="bg-slate-200 p-2 bg-opacity-40 text-green-700 my-5 font-button rounded-md hidden">
+            Correct Answer: {questions[quest].correctAnswer}
+          </p>
+        )}
       </div>
       <button className="cardBtn" onClick={handleNextQuest}>
         Next Question

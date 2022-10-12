@@ -12,22 +12,6 @@
   transition: 0.2s ease-in;
 }
 
-/* .active::before {
-  content: "";
-  position: absolute;
-  background-color: rgb(180, 199, 240);
-  border-radius: 50px;
-  height: 3px;
-  width: 0;
-  transform: scaleX(50%);
-  transform-origin: left;
-  transition: transform 0.5s ease-out;
-  bottom: 0;
-  left: 5px;
-  right: 0;
-  top: 0;
-} */
-
 .navlinks a {
   position: relative;
   padding-bottom: 3px;
@@ -50,7 +34,6 @@
   position: absolute;
   background-color: rgb(252, 175, 102);
   height: 3px;
-  /* width: 80%; */
   transform-origin: right;
   transform: scaleX(100%);
   bottom: 0;

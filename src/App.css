@@ -1,0 +1,90 @@
+.App {
+  background-image: url("https://wallpaperaccess.com/full/3255061.jpg");
+  /* background-image: url("https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-zoom-virtual-background-_Tcjok-d9b4.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar {
+  position: relative;
+  /* z-index: ; */
+}
+
+.App::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.6);
+  backdrop-filter: blur(5px);
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+
+.active {
+  position: relative;
+  font-weight: 600;
+  color: rgb(159, 229, 247);
+  padding-bottom: 3px;
+  transition: 0.2s ease-in;
+}
+
+.navlinks a {
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.navlinks a::before {
+  content: "";
+  position: absolute;
+  background-color: #fcad64;
+  height: 3px;
+  transition: transform 0.2s ease;
+  transform-origin: right;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+}
+
+.navlinks a:hover::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(252, 175, 102);
+  height: 3px;
+  transform-origin: right;
+  transform: scaleX(100%);
+  bottom: 0;
+  right: 0;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(252, 175, 102);
+  border-radius: 50px;
+  height: 3px;
+  width: 0;
+  transform: scaleX(100%);
+  transform-origin: right;
+  transition: transform 0.5s ease-out;
+  bottom: 0;
+  left: 0;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(252, 175, 102);
+  border-radius: 50px;
+  height: 3px;
+  transform-origin: left;
+  transform: scaleX(100%);
+  transition: transform 0.15s ease-out;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  top: 100%;
+}
